@@ -349,10 +349,10 @@ class Cobra(XMLData):
 
         return self.dict([(unicode(root.tag), value)])
 
-
-abdera = Abdera()
-badgerfish = BadgerFish()
-cobra = Cobra()
-gdata = GData()
-parker = Parker()
-yahoo = Yahoo()
+class XMLJSON:
+    abdera = Abdera()
+    badgerfish = BadgerFish()
+    cobra = Cobra()
+    gdata = GData()
+    parker = Parker()
+    yahoo = Yahoo()
