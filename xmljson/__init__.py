@@ -2,10 +2,7 @@
 
 import sys
 from collections import Counter, OrderedDict
-try:
-    from lxml.etree import Element
-except ImportError:
-    from xml.etree.cElementTree import Element
+import xml.etree.ElementTree as ET
 
 __author__ = 'S Anand'
 __email__ = 'root.node@gmail.com'
@@ -32,7 +29,7 @@ class XMLData(object):
         if callable(xml_tostring):
             self._tostring = xml_tostring
         # custom etree.Element to use
-        self.element = Element if element is None else element
+        self.element = ET.Element if element is None else element
         # dict constructor (e.g. OrderedDict, defaultdict)
         self.dict = OrderedDict if dict_type is None else dict_type
         # list constructor (e.g. UserList)
